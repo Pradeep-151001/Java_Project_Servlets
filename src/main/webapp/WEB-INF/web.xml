@@ -1,0 +1,87 @@
+
+
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="https://jakarta.ee/xml/ns/jakartaee"
+	xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_4_0.xsd"
+	id="WebApp_ID" version="4.0">
+
+	<servlet>
+
+		<servlet-name>Home</servlet-name>
+		<servlet-class>com.google.www.Home</servlet-class>
+
+	</servlet>
+	
+	<display-name>Server</display-name>
+
+	<servlet-mapping>
+		<servlet-name>Home</servlet-name>
+		<url-pattern>/home</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+
+		<servlet-name>AddUser</servlet-name>
+		<servlet-class>com.google.www.AddUser</servlet-class>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddUser</servlet-name>
+		<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>Main</servlet-name>
+		<servlet-class>com.google.www.Main</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Main</servlet-name>
+		<url-pattern>/main</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>Sample</servlet-name>
+		<servlet-class>com.google.www.Sample</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Sample</servlet-name>
+		<url-pattern>/sample</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FormClass</servlet-name>
+		<servlet-class>com.google.www.FormClass</servlet-class>
+<init-param>  
+<param-name>dname</param-name>  
+<param-value>com.mysql.cj.jdbc.Driver</param-value>  
+</init-param>
+		
+</servlet>
+<context-param>  
+<param-name>FirstName</param-name>  
+<param-value>test</param-value>  
+</context-param>
+
+<context-param>
+<param-name>contextName</param-name>  
+<param-value>11</param-value>
+</context-param>
+
+	<servlet-mapping>
+		<servlet-name>FormClass</servlet-name>
+		<url-pattern>/details</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+        <welcome-file>requestfile.html</welcome-file>
+    </welcome-file-list>
+    
+    
+    
+    
+</web-app>
+
+
